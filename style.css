@@ -11,7 +11,7 @@ html {
 
 body {
   margin-left: 5rem;
-  height: 100vh;
+  height: 100%;
 }
 
 header {
@@ -19,7 +19,20 @@ header {
   text-transform: uppercase;
 }
 
-span:hover {
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.sub-head {
+  display: inline-flex;
+}
+
+.marg {
+  margin-left: -3rem;
+}
+
+.sub-head:hover {
   color: var(--font-color);
   font-size: 10rem;
   transition: 100ms ease-in-out;
