@@ -1,0 +1,104 @@
+*,
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  --font-color: hsl(320, 54%, 25%);
+}
+
+body {
+  margin-left: 10rem;
+}
+
+header {
+  font-size: 7rem;
+  text-transform: uppercase;
+}
+
+span:hover {
+  color: var(--font-color);
+  font-size: 12rem;
+  transition: 100ms ease-in-out;
+}
+
+.bio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+
+ul {
+  display: flex;
+
+  flex-direction: column;
+  margin-left: 30%;
+
+  font-size: 5rem;
+  list-style: none;
+}
+
+a {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--font-color);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+li {
+  padding-top: 3rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: 400ms;
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+a:active {
+  color: black;
+}
+
+.bio-text {
+  display: flex;
+  max-width: 41%;
+  margin-left: 20%;
+  margin-top: 8%;
+  padding: 1rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: var(--font-color);
+  background-image: linear-gradient(
+    140deg,
+    hsl(320, 54%, 25%, 0.1) 30%,
+    rgb(255, 255, 255, 0.1),
+    hsl(320, 54%, 25%, 0.1)
+  );
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+}
+
+.bio-text:hover {
+  outline: 4px solid rgb(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px black;
+  transition: 100ms;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
