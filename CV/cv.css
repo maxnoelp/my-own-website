@@ -1,0 +1,72 @@
+*,
+*,
+::before ::after {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.header-cv {
+  background-color: aquamarine;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+}
+
+.save {
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  left: 5rem;
+  top: 5rem;
+  transform: rotate(-45deg);
+}
+
+.live {
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  right: 5rem;
+  top: 5rem;
+  transform: rotate(45deg);
+}
+
+.overhead {
+  text-align: center;
+  color: blue;
+  font-size: 12rem;
+  margin-top: 0;
+}
+
+.sub-heading-cv {
+  text-align: center;
+  font-size: 2rem;
+
+  margin-top: -9rem;
+  padding-bottom: 1rem;
+}
+
+.contact-cv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.contact-cv a {
+  color: black;
+  text-decoration-style: double;
+}
+
+.contact-cv a:hover {
+  cursor: pointer;
+  color: brown;
+}
