@@ -12,11 +12,34 @@ html {
 body {
   margin: 0 0 0 5rem;
   height: 100%;
+  position: relative;
 }
 
 main {
   height: 100%;
   margin: 0;
+}
+
+.save-amazon {
+  position: absolute;
+  width: 280px;
+  height: 110px;
+  left: -4rem;
+  top: 70%;
+  opacity: 0.4;
+  transform: rotate(-22.5deg);
+}
+
+.beezsteez {
+  position: absolute;
+  width: 280px;
+  height: 140px;
+  left: -5rem;
+  top: 87%;
+  color: red;
+  border-color: green;
+  opacity: 0.4;
+  transform: rotate(22.5deg);
 }
 
 header {

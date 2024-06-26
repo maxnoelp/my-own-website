@@ -19,6 +19,7 @@ body {
   position: relative;
   flex-direction: column;
   border-bottom: 2px solid black;
+  background-image: url(images/xnatur-pur.jpeg.pagespeed.ic.-wxdmhwpiD.jpg);
 }
 
 .save {
