@@ -8,6 +8,10 @@
   --text-color: hsl(282, 100%, 41%);
   --color-1: rgba(9, 100, 121, 1);
   --color-2: rgba(19, 175, 210, 1);
+  font-family: "Signika Negative", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -64,70 +68,6 @@ nav .home-style {
   padding: 0 20px;
 }
 
-/* Nav Menu Mobile */
-
-@media (max-width: 450px) {
-  html {
-    font-size: 14px;
-  }
-
-  .links-container {
-    flex-direction: column;
-    align-items: flex-start;
-
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 10;
-    width: 300px;
-
-    background-color: var(--color-1);
-    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-    transition: 1s ease-in-out;
-  }
-
-  .amazon-save {
-    display: flex;
-    height: 120px;
-    width: 260px;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-  }
-
-  .save-side {
-    display: flex;
-    height: 160px;
-    width: 280px;
-    margin-top: auto;
-  }
-
-  nav a {
-    box-sizing: border-box;
-    height: auto;
-    width: 100%;
-    padding: 20px 30px;
-    justify-content: flex-start;
-  }
-
-  .open-sidebar-button,
-  .close-sidebar-button {
-    padding: 20px;
-    display: block;
-  }
-
-  #sidebar-active:checked ~ .links-container {
-    right: 0;
-  }
-  #sidebar-active:checked ~ #overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
-  }
-}
-
 .nav-icon {
   width: 24px;
   height: 24px;
@@ -144,7 +84,7 @@ nav .home-style {
   background: rgb(1, 14, 17);
   background: linear-gradient(
     0deg,
-    rgba(1, 14, 17, 1) 0%,
+    rgba(1, 14, 17, 1) 11%,
     rgba(9, 100, 121, 1) 36%,
     rgba(19, 175, 210, 1) 69%
   );
@@ -154,7 +94,7 @@ nav .home-style {
   text-align: center;
   background-image: linear-gradient(
     180deg,
-    rgba(1, 14, 17, 1) 0%,
+    rgba(1, 14, 17, 1) 11%,
     rgba(9, 100, 121, 1) 36%,
     rgba(19, 175, 210, 1) 69%
   );
@@ -184,16 +124,20 @@ nav .home-style {
   background: rgb(1, 14, 17);
   background: linear-gradient(
     180deg,
-    rgba(1, 14, 17, 1) 11%,
-    rgba(19, 175, 210, 0) 100%,
-    rgba(9, 100, 121, 0) 100%
+    rgb(0, 0, 0) 5%,
+
+    rgba(19, 175, 210, 1) 100%
   );
   padding-top: 0.5rem;
 }
 
 .contact-cv a {
-  color: Black;
+  color: white;
   text-decoration: none;
+}
+
+.standing {
+  color: white;
 }
 
 .contact-cv a:hover {
@@ -203,5 +147,103 @@ nav .home-style {
 
 /* Header Ends */
 
-@media() {
+/* Content */
+
+#content-cv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 5rem;
+}
+
+.fertigkeiten ul {
+  text-align: center;
+  list-style: none;
+}
+
+.sprachen ul {
+  list-style: none;
+}
+
+/* Nav Menu Mobile */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 14px;
+  }
+
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 1s ease-in-out;
+  }
+
+  .amazon-save {
+    display: flex;
+    height: 100px;
+    width: 260px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    opacity: 0.5;
+  }
+
+  .save-side {
+    display: flex;
+    height: 120px;
+    width: 280px;
+    margin-top: auto;
+    opacity: 0.5;
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  #content-cv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0rem;
+  }
+
+  .fertigkeiten,
+  .sprachen {
+    border-top: 2px solid Black;
+  }
+
+  .sub-heading-cv {
+    margin-top: -11rem;
+    text-decoration: underline white;
+  }
 }

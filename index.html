@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+
     <title>Nölp Max Website</title>
 </head>
 
@@ -15,29 +19,48 @@
 
 
     <main>
+        <nav>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+                <img class="nav-icon" src="/CV/images/menu_24dp_FILL0_wght400_GRAD0_opsz24 (1).png" alt="">
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <img class="nav-icon" src="/CV/images/close_24dp_FILL0_wght400_GRAD0_opsz24 (1).png" alt="">
+                </label>
 
-        <div class="header">
-            <header>
-                <h1>
-                    <div class="sub-head ">W</div>
-                    <div class="sub-head marg">e</div>
-                    <div class="sub-head marg">l</div>
-                    <div class="sub-head marg">c</div>
-                    <div class="sub-head marg">o</div>
-                    <div class="sub-head marg">m</div>
-                    <div class="sub-head marg">e</div>
-                    <div class="sub-head marg">.</div>
-                </h1>
-            </header>
-
-            <div class="icons">
-                <img class="icon-size left" src="images/icons8-javascript-144.png" alt="">
-                <img class="icon-size right" src="images/icons8-vue-js-64.png" alt="">
-                <img class="icon-size left" src="images/css.png" alt="">
-                <img class="icon-size right" src="images/icons8-html-100.png" alt="">
+                <a class="home-style" href="/CV/index.html">CV</a>
+                <a href="/Cool Things/index.html">Cool Things</a>
+                <a href="/Projects/index.html">Projects</a>
+                <img class="save-side" src="images/Bees20Logo_0.png" alt="">
+                <img src="/images/Saving+the+Amazon+Logo.png" alt="" class="amazon-save">
             </div>
+        </nav>
+        <section class="mobile-page">
+            <div class="header">
+                <header>
+                    <h1>
+                        <div class="sub-head ">W</div>
+                        <div class="sub-head marg">e</div>
+                        <div class="sub-head marg">l</div>
+                        <div class="sub-head marg">c</div>
+                        <div class="sub-head marg">o</div>
+                        <div class="sub-head marg">m</div>
+                        <div class="sub-head marg">e</div>
+                        <div class="sub-head marg">.</div>
+                    </h1>
+                </header>
 
-        </div>
+                <div class="icons">
+                    <img class="icon-size left" src="images/icons8-javascript-144.png" alt="">
+                    <img class="icon-size right" src="images/icons8-vue-js-64.png" alt="">
+                    <img class="icon-size left" src="images/css.png" alt="">
+                    <img class="icon-size right" src="images/icons8-html-100.png" alt="">
+                </div>
+
+            </div>
+        </section>
         <div class="bio">
             <div class="list">
                 <ul>
@@ -46,10 +69,13 @@
                     <li><a class="bounce" href="Cool Things/index.html" target="_blank">Cool Things</a></li>
                 </ul>
             </div>
+
             <p class="bio-text">Hello, my name is Max. I am 29 years young and come from Haßfurt(Bavaria). I am
                 still in
                 training to
-                become a frontend web developer. My strengths are ambition, curiosity and motivation. This new stage in
+                become a frontend web developer. My strengths are ambition, curiosity and motivation. This new
+                stage
+                in
                 my life is a dream come true for me. I want to constantly develop and discover new things.</p>
 
         </div>

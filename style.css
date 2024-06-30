@@ -7,6 +7,10 @@
 
 html {
   --font-color: hsl(186, 41%, 46%);
+  font-family: "Signika Negative", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -20,31 +24,12 @@ main {
   margin: 0;
 }
 
-.save-amazon {
-  position: absolute;
-  width: 280px;
-  height: 110px;
-  left: -4rem;
-  top: 70%;
-  opacity: 0.4;
-  transform: rotate(-22.5deg);
-}
-
-.beezsteez {
-  position: absolute;
-  width: 280px;
-  height: 140px;
-  left: -5rem;
-  top: 87%;
-  color: red;
-  border-color: green;
-  opacity: 0.4;
-  transform: rotate(22.5deg);
-}
-
 header {
   font-size: 6rem;
   text-transform: uppercase;
+  width: 40%;
+  margin-top: 10rem;
+  margin-bottom: 0rem;
 }
 
 .header {
@@ -63,7 +48,7 @@ header {
 }
 
 .marg {
-  margin-left: -3rem;
+  margin-left: -2rem;
 }
 
 .icons {
@@ -231,5 +216,176 @@ li {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* Nav-Menü Mobil */
+
+/* Nav Menü */
+.save-side,
+.amazon-save {
+  display: none;
+}
+
+nav {
+  display: none;
+  height: 30px;
+  background-color: rgba(9, 100, 121, 1);
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  background-color: rgba(19, 175, 210, 1);
+}
+
+nav .home-style {
+  margin-right: auto;
+}
+
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+  padding: 0 20px;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 450px) {
+  nav {
+    height: 30px;
+    background-color: rgba(9, 100, 121, 1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+
+    background-color: rgba(9, 100, 121, 1);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 1s ease-in-out;
+  }
+
+  .amazon-save {
+    display: flex;
+    height: 100px;
+    width: 260px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    opacity: 0.5;
+  }
+
+  .save-side {
+    display: flex;
+    height: 120px;
+    width: 280px;
+    margin-top: auto;
+    opacity: 0.5;
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+
+  .list {
+    display: none;
+  }
+
+  .sub-head {
+    font-size: 3.6rem;
+  }
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-top: -1rem;
+  }
+
+  .marg {
+    margin-left: 0rem;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .mobile-container {
+    display: flex;
+    margin: 0;
+  }
+
+  .bio-text {
+    display: flex;
+    flex-direction: row;
+    width: 40rem;
+    margin-right: 0;
+    margin-left: 4.25rem;
+    margin-top: 0;
+    padding: 1rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: var(--font-color);
+    background-image: linear-gradient(
+      140deg,
+      hsl(320, 54%, 25%, 0.1) 30%,
+      rgb(255, 255, 255, 0.1),
+      hsl(320, 54%, 25%, 0.1)
+    );
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
   }
 }
