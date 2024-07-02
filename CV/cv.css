@@ -90,7 +90,7 @@ nav .home-style {
   );
 }
 
-.overhead {
+.overhead-cv {
   text-align: center;
   background-image: linear-gradient(
     180deg,
@@ -136,7 +136,7 @@ nav .home-style {
   text-decoration: none;
 }
 
-.standing {
+.standing-cv {
   color: white;
 }
 
@@ -157,13 +157,21 @@ nav .home-style {
   margin-top: 5rem;
 }
 
-.fertigkeiten ul {
+.fertigkeiten div {
+  display: inline;
+  flex-direction: column;
   text-align: center;
-  list-style: none;
+  margin-top: -3rem;
+}
+
+.fertigkeiten p {
+  text-align: center;
 }
 
 .sprachen ul {
+  text-align: center;
   list-style: none;
+  margin-right: 1rem;
 }
 
 /* Nav Menu Mobile */

@@ -14,8 +14,7 @@ html {
 }
 
 body {
-  margin: 0 0 0 5rem;
-  height: 100%;
+  margin: 0;
   position: relative;
 }
 
@@ -24,7 +23,7 @@ main {
   margin: 0;
 }
 
-header {
+.header-index {
   font-size: 6rem;
   text-transform: uppercase;
   width: 40%;
@@ -32,16 +31,16 @@ header {
   margin-bottom: 0rem;
 }
 
-.header {
+.header-start {
   display: flex;
   flex-direction: row;
-  margin-top: -5rem;
+  margin-top: -8rem;
   margin-bottom: 0rem;
   padding-bottom: 0;
   transition: 0.5s ease;
 }
 
-.sub-head {
+.sub-head-index {
   display: inline-flex;
   animation: myAnim 5s ease 1 normal forwards;
   color: hsl(186, 41%, 23%);
@@ -51,7 +50,7 @@ header {
   margin-left: -2rem;
 }
 
-.icons {
+.icons-index {
   display: flex;
   width: 10rem;
   flex-direction: column;
@@ -63,22 +62,22 @@ header {
   height: 40px;
   margin-top: 5rem;
 }
-.left {
+.left-index {
   margin-left: auto;
   animation: left 5s ease 1 normal forwards;
 }
 
-.right {
+.right-index {
   animation: right 5s ease 1 normal forwards;
 }
 
-.bio {
+.bio-index {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
 }
 
-ul {
+.ul-index {
   display: flex;
 
   flex-direction: column;
@@ -99,7 +98,7 @@ ul {
   transform-origin: bottom;
 }
 
-li {
+.list-index {
   padding-top: 3rem;
 }
 
@@ -117,6 +116,7 @@ li {
 .bio-text {
   display: flex;
   max-width: 35%;
+  max-height: 350px;
   margin-left: 40%;
   margin-top: 8%;
   padding: 1rem;
@@ -340,11 +340,11 @@ nav .home-style {
     z-index: 9;
   }
 
-  .list {
+  .list-index {
     display: none;
   }
 
-  .sub-head {
+  .sub-head-index {
     font-size: 3.6rem;
   }
 
@@ -363,21 +363,20 @@ nav .home-style {
     margin: 0;
   }
 
-  .mobile-container {
+  .mobile-page {
     display: flex;
     margin: 0;
   }
 
   .bio-text {
     display: flex;
-    flex-direction: row;
     width: 40rem;
     margin-right: 0;
-    margin-left: 4.25rem;
+    margin-left: 4rem;
     margin-top: 0;
     padding: 1rem;
     font-size: 1.25rem;
-    line-height: 2rem;
+    line-height: 1.25rem;
     color: var(--font-color);
     background-image: linear-gradient(
       140deg,
