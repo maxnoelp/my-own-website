@@ -108,6 +108,11 @@ body {
 
 /* Startseite */
 
+.header-container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
 .header-index {
   font-size: 1.75rem;
   text-align: center;
@@ -115,15 +120,6 @@ body {
   text-transform: uppercase;
   margin-top: 1.5rem;
   animation: myAnim 5s ease 1 normal forwards;
-}
-
-.header-start {
-  display: flex;
-  flex-direction: row;
-  margin-top: -8rem;
-  margin-bottom: 0rem;
-  padding-bottom: 0;
-  transition: 0.5s ease;
 }
 
 @keyframes myAnim {
@@ -177,13 +173,6 @@ body {
   animation: myAnim 5s ease 1 normal forwards;
 }
 
-.icon-index {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  animation: myAnim 5s ease 1 normal forwards;
-}
-
 .icon-size {
   width: 40px;
   height: 40px;
@@ -191,6 +180,7 @@ body {
 
 .biographie-index {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
@@ -261,7 +251,7 @@ body {
 
 .bees {
   display: flex;
-  justify-content: space-between;
+  gap: 4rem;
   align-items: center;
   padding: 2rem 2rem 0rem 2rem;
   animation: bounce 5s ease 1 normal forwards;
@@ -405,7 +395,7 @@ body {
 }
 
 .fertigkeiten div {
-  display: inline;
+  display: flex;
   flex-direction: column;
   text-align: center;
   font-size: 1.25rem;
@@ -424,4 +414,96 @@ body {
   list-style: none;
   padding: 1rem;
   font-size: 1.25rem;
+}
+
+/* Prject-Page */
+
+.notes-web-app {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.notes-web-app h2 a {
+  color: #333;
+}
+
+.notes-web-app h2 a:hover {
+  color: blue;
+}
+
+.notes-web-app img {
+  height: 300px;
+  width: 350px;
+}
+
+@media (min-width: 768px) {
+  body {
+    max-height: 100%;
+  }
+
+  .header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header-index {
+    display: flex;
+    font-size: 4.5rem;
+    text-shadow: 1px 1px 2px white;
+    text-align: left;
+    padding-left: 5rem;
+  }
+
+  .icons-index {
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  .icon-size {
+    width: 60px;
+    height: 60px;
+  }
+
+  .left-index {
+    margin-right: 10rem;
+  }
+
+  .biographie-index {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .bio-text {
+    width: 20%;
+    margin: auto;
+  }
+
+  .bees {
+    display: none;
+  }
+
+  #content-cv {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .bildungsweg {
+    display: flex;
+    flex-direction: column;
+    margin-left: -10rem;
+  }
+
+  .fertigkeiten {
+    border: none;
+  }
+
+  .sprachen {
+    border: none;
+  }
 }
