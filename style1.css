@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   background-color: grey;
@@ -105,9 +111,9 @@ body {
 .header-index {
   font-size: 1.75rem;
   text-align: center;
+  font-weight: 800;
   text-transform: uppercase;
   margin-top: 1.5rem;
-  padding: 1rem 1rem 0rem 1rem;
   animation: myAnim 5s ease 1 normal forwards;
 }
 
@@ -191,9 +197,65 @@ body {
 }
 
 .bio-text {
-  border: 2px solid black;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 41%,
+    rgba(92, 92, 92, 1) 61%,
+    rgba(102, 102, 102, 1) 82%,
+    rgba(117, 117, 117, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(0, 0, 0, 1)),
+    color-stop(41%, rgba(59, 59, 59, 1)),
+    color-stop(61%, rgba(92, 92, 92, 1)),
+    color-stop(82%, rgba(102, 102, 102, 1)),
+    color-stop(100%, rgba(117, 117, 117, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 41%,
+    rgba(92, 92, 92, 1) 61%,
+    rgba(102, 102, 102, 1) 82%,
+    rgba(117, 117, 117, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 41%,
+    rgba(92, 92, 92, 1) 61%,
+    rgba(102, 102, 102, 1) 82%,
+    rgba(117, 117, 117, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 41%,
+    rgba(92, 92, 92, 1) 61%,
+    rgba(102, 102, 102, 1) 82%,
+    rgba(117, 117, 117, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 41%,
+    rgba(92, 92, 92, 1) 61%,
+    rgba(102, 102, 102, 1) 82%,
+    rgba(117, 117, 117, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#757575', GradientType=1 );
+  -webkit-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.75);
+  color: white;
   width: 80%;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   padding: 1rem;
 }
 
@@ -202,6 +264,51 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 2rem 0rem 2rem;
+  animation: bounce 5s ease 1 normal forwards;
+}
+
+@keyframes bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(-68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(-32px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
 }
 
 .bees img {
