@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
@@ -13,76 +13,68 @@
 </head>
 
 
-<body background="images/6150433.jpg">
+<body class="index-body">
     <!-- <img src="images/Bees20Logo_0.png" alt="" class="beezsteez">
     <img src="images/Saving+the+Amazon+Logo.png" alt="" class="save-amazon"> -->
 
 
     <main>
-        <nav class="nav-index">
-            <input type="checkbox" id="sidebar-active">
-            <label for="sidebar-active" class="open-sidebar-button">
-                <img class="nav-icon" src="images/menu_24dp_FILL0_wght400_GRAD0_opsz24 (1).png" alt="">
-            </label>
-            <label id="overlay" for="sidebar-active"></label>
-            <div class="links-container">
-                <label for="sidebar-active" class="close-sidebar-button">
-                    <img class="nav-icon" src="images/close_24dp_FILL0_wght400_GRAD0_opsz24 (1).png" alt="">
-                </label>
+        <nav class="navbar">
+            <div class="logo"><img src="images/prinz-01 (1).png" alt=""></div>
+            <ul class="nav-links">
 
-                <a class="home-style" href="CV.html">CV</a>
-                <a href="Cool Things/index.html">Cool Things</a>
-                <a href="Projects/index.html">Projects</a>
-                <img class="save-side" src="images/Bees20Logo_0.png" alt="">
-                <img src="images/Saving amazon.png" alt="" class="amazon-save">
+                <li><a href="CV.html">About Me</a></li>
+                <li><a href="cool.html">Cool Things</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="dropdown">
+                    <a href="#">Social Media</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://github.com/maxnoelp">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/max-n%C3%B6lp-18b41a312/">LinkedIN</a></li>
+                        <li><a href="https://www.instagram.com/prinz_tengen/">Instagram</a></li>
+                        <li><a href="https://www.frontendmentor.io/profile/maxnoelp">Frontend Mentor</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:noelpmax@gmail.com">Email</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
-        <section class="mobile-page-index">
-            <div class="header-start">
-                <header class="header-index">
-                    <h1>
-                        <div class="sub-head-index ">W</div>
-                        <div class="sub-head-index marg">e</div>
-                        <div class="sub-head-index marg">l</div>
-                        <div class="sub-head-index marg">c</div>
-                        <div class="sub-head-index marg">o</div>
-                        <div class="sub-head-index marg">m</div>
-                        <div class="sub-head-index marg">e</div>
-                        <div class="sub-head-index marg">.</div>
-                    </h1>
-                </header>
 
-                <div class="icons-index">
-                    <img class="icon-size left-index" src="images/icons8-javascript-144.png" alt="">
-                    <img class="icon-size right-index" src="images/icons8-vue-js-64.png" alt="">
-                    <img class="icon-size left-index" src="images/css.png" alt="">
-                    <img class="icon-size right-index" src="images/icons8-html-100.png" alt="">
-                </div>
+        <div class="header-index">
+            <h1>Welcome.</h1>
+        </div>
+        <div class="icons-index">
+            <img class="icon-size left-index" src="images/icons8-javascript-144.png" alt="">
+            <img class="icon-size right-index" src="images/icons8-vue-js-64.png" alt="">
+            <img class="icon-size left-index" src="images/css.png" alt="">
+            <img class="icon-size right-index" src="images/icons8-html-100.png" alt="">
+        </div>
+        <div class="icon-index">
+            <img class="icon-size" src="images/free-nodejs-5-459183.webp" alt="">
+            <img class="icon-size" src="images/25231.png" alt="">
+        </div>
 
-            </div>
-        </section>
-        <div class="bio-index">
-            <div class="list-index">
-                <ul class="ul-index">
-                    <li class="list-index"><a class="bounce" href="Projects/index.html" target="_blank">Projects</a>
-                    </li>
-                    <li class="list-index"><a class="bounce" href="CV.html" target="_blank">CV</a></li>
-                    <li class="list-index"><a class="bounce" href="Cool Things/index.html" target="_blank">Cool
-                            Things</a></li>
-                </ul>
-            </div>
-
-            <p class="bio-text">Hello, my name is Max. I am 29 years young and come from Haßfurt(Bavaria). I am
+        <div class="biographie-index">
+            <p class="bio-text">Hello, my name is Max. I am 29 years young and come from Haßfurt(Bavaria).
+                I am
                 still in
                 training to
                 become a frontend web developer. My strengths are ambition, curiosity and motivation. This new
                 stage
                 in
                 my life is a dream come true for me. I want to constantly develop and discover new things.</p>
+        </div>
 
+        <div class="bees">
+            <img src="images/Bees20Logo_0.png" alt="">
+            <img id="amazonas" src="images/Saving amazon.png" alt="">
         </div>
     </main>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
