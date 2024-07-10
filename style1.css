@@ -9,11 +9,26 @@
   font-family: "Baskervville SC", serif;
   font-weight: 400;
   font-style: normal;
+  --var-font-color: #84596b;
+  --var-background-color: #af9bb6;
+  --var-accent-color: #440d0f;
+  --var-shadow-color: #603a40;
+  --var-border-color: #f0f7ee;
 }
 
 body {
   margin: 0;
-  background-color: grey;
+  background-color: var(--var-background-color);
+}
+
+@media (width: 1920px) {
+  body {
+    display: flex;
+    align-items: center;
+    :root {
+      font-size: 2.25rem;
+    }
+  }
 }
 
 /* NAV-BAR */
@@ -22,7 +37,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: var(--var-accent-color);
   padding: 0.5rem;
   font-size: 1rem;
 }
@@ -45,7 +60,7 @@ body {
 }
 
 .nav-links a {
-  color: #fff;
+  color: var(--var-border-color);
   text-decoration: none;
   padding: 8px 12px;
   display: block;
@@ -56,12 +71,12 @@ body {
   position: absolute;
   top: 40px;
   left: 0;
-  background-color: #333;
+  background-color: var(--var-accent-color);
   list-style: none;
   padding: 0;
   margin: 0;
   min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px var(--var-shadow-color);
 }
 
 .dropdown-content {
@@ -85,7 +100,7 @@ body {
 .menu-toggle .bar {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--var-border-color);
   margin: 4px 0;
 }
 
@@ -118,6 +133,7 @@ body {
   text-align: center;
   font-weight: 800;
   text-transform: uppercase;
+  color: var(--var-font-color);
   margin-top: 1.5rem;
   animation: myAnim 5s ease 1 normal forwards;
 }
@@ -187,63 +203,63 @@ body {
 }
 
 .bio-text {
-  border: 2px solid white;
+  border: 2px solid var(--var-border-color);
   border-radius: 10px;
-  background: rgba(0, 0, 0, 1);
+  color: var(--var-border-color);
+  background: rgb(164, 142, 171, 1);
   background: -moz-linear-gradient(
     -45deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 41%,
-    rgba(92, 92, 92, 1) 61%,
-    rgba(102, 102, 102, 1) 82%,
-    rgba(117, 117, 117, 1) 100%
+    rgb(164, 142, 171) 0%,
+    rgba(151, 126, 160, 1) 41%,
+    rgba(131, 104, 141, 1) 61%,
+    rgba(109, 87, 117, 1) 82%,
+    rgba(87, 69, 94, 1) 100%
   );
   background: -webkit-gradient(
     left top,
     right bottom,
-    color-stop(0%, rgba(0, 0, 0, 1)),
-    color-stop(41%, rgba(59, 59, 59, 1)),
-    color-stop(61%, rgba(92, 92, 92, 1)),
-    color-stop(82%, rgba(102, 102, 102, 1)),
-    color-stop(100%, rgba(117, 117, 117, 1))
+    color-stop(0%, rgb(164, 142, 171)),
+    color-stop(41%, rgba(151, 126, 160, 1)),
+    color-stop(61%, rgba(131, 104, 141, 1)),
+    color-stop(82%, rgba(109, 87, 117, 1)),
+    color-stop(100%, rgba(87, 69, 94, 1))
   );
   background: -webkit-linear-gradient(
     -45deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 41%,
-    rgba(92, 92, 92, 1) 61%,
-    rgba(102, 102, 102, 1) 82%,
-    rgba(117, 117, 117, 1) 100%
+    rgb(164, 142, 171) 0%,
+    rgba(151, 126, 160, 1) 41%,
+    rgba(131, 104, 141, 1) 61%,
+    rgba(109, 87, 117, 1) 82%,
+    rgba(87, 69, 94, 1) 100%
   );
   background: -o-linear-gradient(
     -45deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 41%,
-    rgba(92, 92, 92, 1) 61%,
-    rgba(102, 102, 102, 1) 82%,
-    rgba(117, 117, 117, 1) 100%
+    rgb(164, 142, 171) 0%,
+    rgba(151, 126, 160, 1) 41%,
+    rgba(131, 104, 141, 1) 61%,
+    rgba(109, 87, 117, 1) 82%,
+    rgba(87, 69, 94, 1) 100%
   );
   background: -ms-linear-gradient(
     -45deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 41%,
-    rgba(92, 92, 92, 1) 61%,
-    rgba(102, 102, 102, 1) 82%,
-    rgba(117, 117, 117, 1) 100%
+    rgb(164, 142, 171) 0%,
+    rgba(151, 126, 160, 1) 41%,
+    rgba(131, 104, 141, 1) 61%,
+    rgba(109, 87, 117, 1) 82%,
+    rgba(87, 69, 94, 1) 100%
   );
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 41%,
-    rgba(92, 92, 92, 1) 61%,
-    rgba(102, 102, 102, 1) 82%,
-    rgba(117, 117, 117, 1) 100%
+    rgb(164, 142, 171) 0%,
+    rgba(151, 126, 160, 1) 41%,
+    rgba(131, 104, 141, 1) 61%,
+    rgba(109, 87, 117, 1) 82%,
+    rgba(87, 69, 94, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#757575', GradientType=1 );
-  -webkit-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.75);
-  color: white;
+  -webkit-box-shadow: 0px 0px 12px 4px var(--var-shadow-color);
+  -moz-box-shadow: 0px 0px 12px 4px var(--var-shadow-color);
+  box-shadow: 0px 0px 12px 4px var(--var-shadow-color);
   width: 80%;
   font-size: 1.35rem;
   padding: 1rem;
