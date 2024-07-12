@@ -75,6 +75,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: -0.5rem;
   min-width: 160px;
   box-shadow: 0 8px 16px var(--var-shadow-color);
 }
@@ -87,7 +88,8 @@ body {
   padding: 10px 20px;
 }
 
-.nav-links .dropdown:hover .dropdown-content {
+.nav-links .dropdown:hover .dropdown-content,
+.nav-links .dropdown-content:hover {
   display: block;
 }
 
@@ -102,6 +104,25 @@ body {
   height: 3px;
   background-color: var(--var-border-color);
   margin: 4px 0;
+}
+
+.blink-text {
+  animation-name: animation-blink;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation-blink {
+  0% {
+    color: white;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: red;
+  }
 }
 
 /* Responsive Styles */
@@ -199,6 +220,10 @@ body {
   }
 }
 
+.save-picture-bees {
+  display: none;
+}
+
 .profile-pic {
   display: flex;
   justify-content: center;
@@ -212,7 +237,7 @@ body {
   border-radius: 100%;
 }
 
-.profile-pic img {
+.me {
   width: 160px;
   height: 160px;
   margin-left: 2.5rem;
@@ -304,6 +329,10 @@ body {
 #amazonas {
   width: 120px;
   height: 50px;
+}
+
+.picture-change {
+  display: none;
 }
 
 /* icons*/
@@ -427,20 +456,35 @@ body {
   }
 
   .profile-pic {
-    width: 280px;
-    height: 280px;
+    border: none;
+    border-radius: none;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    /*  width: 280px;
+
+    height: 280px;*/
   }
 
-  .profile-pic img {
-    width: 280px;
-    height: 280px;
-    margin-left: 7.5rem;
+  .save-picture-bees {
+    display: unset;
+    width: 400px;
+    height: 250px;
+    opacity: 0.25;
+    transform: rotate(22.5deg);
+  }
+
+  .me {
+    display: none;
   }
 
   .icons-index {
     flex-direction: column;
     align-items: center;
     padding: 4rem;
+    width: 1000px;
+    margin: auto;
   }
 
   .icon-size {
@@ -449,31 +493,45 @@ body {
   }
 
   .biographie-index {
-    padding: 0 0 0 4rem;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 50%;
+    padding-left: 5.5rem;
   }
 
   .bio-text {
     border: none;
     width: 60%;
-    margin-top: 0;
+    padding: 2.5rem;
   }
 
-  .bees {
-    margin-bottom: 5rem;
-    gap: 10rem;
+  .picture-change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid var(--var-border-color);
+    background-color: transparent;
+    width: 280px;
+    height: 280px;
+    border-radius: 100%;
+    margin-left: -3.5rem;
   }
 
-  .bees img {
-    width: 400px;
-    height: 250px;
-    opacity: 0.4;
+  #profile-picture {
+    width: 280px;
+    height: 280px;
+    border-radius: 100%;
+    margin-left: -2.5rem;
+    margin-top: -3rem;
+  }
+
+  #bees-pic {
+    display: none;
   }
 
   #amazonas {
-    width: 480px;
-    height: 200px;
+    display: none;
   }
 
   .projects-incoming {
@@ -487,5 +545,11 @@ body {
     text-align: center;
     flex-direction: column;
     width: 50%;
+  }
+}
+
+@media (min-width: 950px) {
+  .bio-text {
+    font-size: 2rem;
   }
 }
