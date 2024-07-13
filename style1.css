@@ -9,11 +9,11 @@
   font-family: "Baskervville SC", serif;
   font-weight: 600;
   font-style: normal;
-  --var-font-color: #3e3232;
-  --var-background-color: #a87c7c;
-  --var-accent-color: #503c3c;
-  --var-shadow-color: #7e6363;
-  --var-border-color: #957777;
+  --var-font-color: #ffffff;
+  --var-background-color: #93929a;
+  --var-accent-color: #46454d;
+  --var-shadow-color: #6b6a72;
+  --var-border-color: #616068;
 }
 
 body {
@@ -60,7 +60,7 @@ body {
 }
 
 .nav-links a {
-  color: var(--var-border-color);
+  color: var(--var-font-color);
   text-decoration: none;
   padding: 8px 12px;
   display: block;
@@ -108,20 +108,20 @@ body {
 
 .blink-text {
   animation-name: animation-blink;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
 @keyframes animation-blink {
   0% {
-    color: white;
+    color: var(--var-font-color);
   }
   50% {
-    color: black;
+    color: var(--var-background-color);
   }
   100% {
-    color: red;
+    color: var(--var-accent-color);
   }
 }
 
@@ -257,12 +257,7 @@ body {
   border: 2px solid var(--var-border-color);
   border-radius: 10px;
   color: var(--var-font-color);
-  background: rgb(168, 124, 124);
-  background: linear-gradient(
-    180deg,
-    rgba(168, 124, 124, 1) 10%,
-    rgba(126, 99, 99, 1) 100%
-  );
+  background-image: linear-gradient(180deg, #46454d 50%, #616068 80%);
   box-shadow: 0px 0px 12px 4px var(--var-shadow-color);
   width: 80%;
   font-size: 1.35rem;
