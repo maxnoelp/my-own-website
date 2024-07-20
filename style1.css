@@ -417,6 +417,22 @@ body {
   width: 350px;
 }
 
+#todo-api h2 {
+  margin-bottom: 0;
+  color: var(--var-font-color);
+  text-decoration: underline;
+}
+
+.todo-img {
+  display: flex;
+  gap: 1rem;
+}
+
+.todo-img img {
+  width: 195px;
+  height: 310px;
+}
+
 /* Footer */
 .contact-icon {
   display: flex;
