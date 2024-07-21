@@ -480,9 +480,9 @@ body {
   }
 
   .save-picture-bees {
-    display: unset;
-    width: 400px;
-    height: 250px;
+    display: flex;
+    width: 22.5rem;
+    height: 15.6rem;
     opacity: 0.25;
     transform: rotate(22.5deg);
   }
@@ -495,7 +495,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 4rem;
-    width: 1000px;
+    width: 70%;
     margin: auto;
   }
 
@@ -578,5 +578,23 @@ body {
 @media (min-width: 950px) {
   .bio-text {
     font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 970px) {
+  .header-index {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1070px) {
+  .header-index {
+    font-size: 4.5rem;
+  }
+
+  .save-picture-bees {
+    display: flex;
+    width: 15rem;
+    height: 10rem;
   }
 }
