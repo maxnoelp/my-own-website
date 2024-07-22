@@ -497,6 +497,7 @@ body {
     padding: 4rem;
     width: 70%;
     margin: auto;
+    font-size: 1.25rem;
   }
 
   .icon-size {
@@ -554,7 +555,8 @@ body {
     height: 600px;
     margin: 2.5rem;
     box-shadow: inset 1px 1px 10px 0px var(--var-shadow-color);
-
+    border-radius: 2px;
+    border: 2px solid var(--var-shadow-color);
     scrollbar-width: thin;
   }
 
